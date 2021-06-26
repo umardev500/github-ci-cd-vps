@@ -9,5 +9,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
+          date > generated.txt
+          git config user.name umardevid
+          git congit user.email umaralfaruq587@gmail.com
+          git add .
+          git commit -m "generated"
+          git push
           ls -la
           echo "done"
