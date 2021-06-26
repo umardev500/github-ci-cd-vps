@@ -27,7 +27,8 @@ jobs:
       - name: Download artifact build
         uses: actions/upload-artifact@v2
         with:
-          name: artifact/nextjs-build
+          name: nextjs-build
+          path: artifact
 
   deploy:
     runs-on: ubuntu-latest
@@ -36,4 +37,5 @@ jobs:
       - name: Download artifact
         uses: actions/upload-artifact@v2
         with:
-          name: artifact/nextjs-build
+          name: nextjs-build
+          path: artifact
