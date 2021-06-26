@@ -11,4 +11,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Listring
-        - run: ls -la
+        run: ls -la
