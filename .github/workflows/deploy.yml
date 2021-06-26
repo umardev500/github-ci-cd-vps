@@ -17,3 +17,8 @@ jobs:
           echo hello > artifact/world.txt
           echo "Listing artifact"
           ls -la artifact
+
+      - name: Upload artifact
+        with:
+          name: build-prod
+          path: artifact
