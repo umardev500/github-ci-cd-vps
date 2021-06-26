@@ -15,4 +15,5 @@ jobs:
           ls -la
           mkdir artifact
           echo hello > artifact/world.txt
-          ls -la
+          echo "Listing artifact"
+          ls -la artifact
