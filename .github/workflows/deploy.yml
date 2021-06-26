@@ -21,7 +21,8 @@ jobs:
           key: ${{ secrets.SSHKEY }}
           port: ${{ secrets.PORT }}
           script: |
-            mkdir ~/.cicd
-            cd ~/.cicd
-            git clone git@github.com:umardevid/github-ci-cd-vps.git
+            # cat ~/.ssh/id_rsa.pub
+            # mkdir ~/.cicd
+            # cd ~/.cicd
+            # git clone git@github.com:umardevid/github-ci-cd-vps.git
             ls -la
