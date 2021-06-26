@@ -10,19 +10,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Listring
+      - name: Listring & creating folder
         run: ls -la
-
-      - name: Deploy to server
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.SSHKEY }}
-          port: ${{ secrets.PORT }}
-          script: |
-            # cat ~/.ssh/id_rsa.pub
-            # mkdir ~/.cicd
-            # cd ~/.cicd
-            # git clone git@github.com:umardevid/github-ci-cd-vps.git
-            ls -la
+        run: mkdir artifact
+        run: echo hello > artifact/world.txt
+        run: ls -la
