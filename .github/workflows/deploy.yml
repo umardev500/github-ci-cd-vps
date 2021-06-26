@@ -7,13 +7,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - run: |
-          date > generated.txt
-          git config user.name umardevid
-          git config user.email umaralfaruq587@gmail.com
-          git add .
-          git commit -m "generated 2"
-          git push
-          ls -la
-          echo "done"
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Listring
+        - run: ls -la
