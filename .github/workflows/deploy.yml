@@ -32,7 +32,3 @@ jobs:
         with:
           name: nextjs-build
           path: artifact
-
-      - name: Listing
-        run: |
-          ls -la
