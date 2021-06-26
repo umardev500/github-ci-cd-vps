@@ -32,7 +32,3 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: nextjs-build
-
-      - name: Listring
-        run: |
-          ls -la
