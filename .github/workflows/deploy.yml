@@ -11,7 +11,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Listring & creating folder
-        run: ls -la
-        run: mkdir artifact
-        run: echo hello > artifact/world.txt
-        run: ls -la
+        run: |
+          ls -la
+          mkdir artifact
+          echo hello > artifact/world.txt
+          ls -la
