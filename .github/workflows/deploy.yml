@@ -36,3 +36,15 @@ jobs:
       - name: listing
         run: |
           ls -la
+
+      - name: Test Docker on server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          port: ${{ secrets.PORT}}
+          key: ${{ secrets.SSHKEY }}
+          script: |
+            cd /home/bangmimin/webapps/temonggoweb/tracking/tracking-dockerize
+            ls -la
+            docker ps
